@@ -1,5 +1,5 @@
 ---
-- name: Install flaskex on Ubuntu 18.04
+- name: Install flaskex on Ubuntu
   hosts: all
   gather_facts: no
 
@@ -26,7 +26,6 @@
         path: ~/flaskex/requirements.txt
         regexp: 'WTForms'
         replace: 'WTForms==1.0.1'
-        #              sed -i 's/WTForms/WTForms==1.0.1/' ~/flaskex/requirements.txt
 
     - name: pip requirements is installed
       pip:
